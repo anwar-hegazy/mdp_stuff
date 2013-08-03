@@ -10,7 +10,7 @@ import os
 x = datetime.datetime.now()
 x = str(x)
 x = x.replace(' ', '_')
-folder_name = '/Users/cta/test/' + str(x) +'/'
+folder_name = '/Users/mdp/test/' + str(x) +'/'
 
 #makes a new folder, named by datetime, in the directory
 os.makedirs( str(folder_name))
