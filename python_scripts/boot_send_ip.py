@@ -6,6 +6,8 @@ import socket
 import datetime, time
 import sys
 
+time.sleep(45) # to address server timeout issues
+
 failed = 1
 while(failed):
     try:
