@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class csv_reader_structures extends PApplet {
+
 //read csv file, format an array with all of our data, hacky sanitization example
 
 /*the sample csv file im using has an \n character at the end of the line, which was getting stored at position 3
@@ -12,7 +28,7 @@ String[][] newPieces;              //this is where all of our data will go
 int numLines;                  //this gives us a counter that we can access (if we need one)
 // int numItems = 
 
-void setup(){
+public void setup(){
 	size(500, 500);
 
 String [] lines = loadStrings("/Users/cta/Desktop/mjt.alcove.csv");
@@ -34,15 +50,24 @@ for ( String line : lines ) {
 
   counter++;                  //increments counter, used to properly insert sanitized data into newPieces
   }
-noLoop();					//noLoop disables void draw's default looping behavior
+noLoop();
 }
 
-void draw(){
+public void draw(){
 
   // this just reads through all of newPieces and prints the sanitized array to, again, check to make sure this is all working
   for (int i = 0; i < numLines; i++){
     //int x = int(random( numLines ));
     println(newPieces[i][0] + ", " + newPieces[i][1]);
-    //ellipse( int(newPieces[i][1]), int(newPieces[i][0]), 50, 50 );
+    ellipse( PApplet.parseInt(newPieces[i][1]), PApplet.parseInt(newPieces[i][0]), 50, 50 );
+  }
+}
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "csv_reader_structures" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
   }
 }
