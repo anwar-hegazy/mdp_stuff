@@ -15,10 +15,10 @@ int numLines;                  //this gives us a counter that we can access (if 
 void setup(){
 	size(500, 500);
 
-String [] lines = loadStrings("/Users/cta/Desktop/mjt.alcove.csv");
+String [] lines = loadStrings("/Users/cta/Desktop/core_a_datacopy1.csv");
 numLines = (lines.length);
 println("there are " + numLines + " lines!");
-newPieces = new String[numLines][2];
+newPieces = new String[numLines][3];
 println("newPieces is an array of length " + str(newPieces.length));
 
 //this for loop splits each line from the csv file at the comma, resulting in a three position array for each line
@@ -43,6 +43,6 @@ void draw(){
   for (int i = 0; i < numLines; i++){
     //int x = int(random( numLines ));
     println(newPieces[i][0] + ", " + newPieces[i][1]);
-    //ellipse( int(newPieces[i][1]), int(newPieces[i][0]), 50, 50 );
+    ellipse( int(newPieces[i][1]), int(newPieces[i][0]), 50, 50 );
   }
 }
