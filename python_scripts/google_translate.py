@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#sourced from: https://github.com/mouuff/Google-Translate-API/blob/master/gtranslate.py
 import urllib2
 
 def translate(to_translate, to_langage="auto", langage="en"):
