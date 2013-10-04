@@ -1,9 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: latin-1 -*-
 import urllib2
-
-#write a function that returns all options for to_language
-#write a for loop that will iterate through each option, calling the translate function each time
 
 def translate(to_translate, to_langage="auto", langage="en"):
 	'''Return the translation using google translate
@@ -25,5 +21,3 @@ if __name__ == '__main__':
 	to_translate = 'i love you?'
 	print("%s >> %s" % (to_translate, translate(to_translate)))
 	print("%s >> %s" % (to_translate, translate(to_translate, 'fr')))
-	#should print Hola como estas >> Hello how are you
-	#and Hola como estas? >> Bonjour comment allez-vous?
