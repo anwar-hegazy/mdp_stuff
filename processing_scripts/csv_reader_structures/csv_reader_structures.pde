@@ -34,7 +34,7 @@ for ( String line : lines ) {
 
   counter++;                  //increments counter, used to properly insert sanitized data into newPieces
   }
-noLoop();					//noLoop disables void draw's default looping behavior
+//noLoop();			//noLoop disables void draw's default looping behavior
 }
 
 void draw(){

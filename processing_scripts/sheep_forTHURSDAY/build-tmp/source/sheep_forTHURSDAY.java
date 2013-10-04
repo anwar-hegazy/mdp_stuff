@@ -202,7 +202,6 @@ public void checkBoundaryCollision(Ball ball, PVector vel) {
     vel.y *= -1;
   }
 }
-
 class Ball{
   float x, y, r, m;
   int a;

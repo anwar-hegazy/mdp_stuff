@@ -186,4 +186,3 @@ void checkBoundaryCollision(Ball ball, PVector vel) {
     vel.y *= -1;
   }
 }
-
