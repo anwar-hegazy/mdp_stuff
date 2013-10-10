@@ -11,8 +11,9 @@ Sensor Station Test
 
 // super rough way to test sensor station
 void setup() {
-  // initialize serial communication at 9600 bits per second:
+
   Serial.begin(9600);
+
 }
 
 void loop() {
@@ -34,7 +35,7 @@ void loop() {
   Serial.print( sensorValue4 );
   Serial.print("\t");
   Serial.print( "bend = " );
-  Serial.print( sensorValue5;
+  Serial.print( sensorValue5);
   Serial.print("\t");
   Serial.print( "force = " );
   Serial.print( sensorValue6 );
