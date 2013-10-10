@@ -1,5 +1,6 @@
 /*
 Sensor Station Test
+this is purely to test power issues across a ton of sensors on the arduino mega
  */
 
  int sensorValue1;
@@ -22,6 +23,7 @@ void loop() {
   sensorValue3 = analogRead(A2);
   sensorValue4 = analogRead(A3);
   sensorValue5 = analogRead(A4); 
+  sensorValue6 = analogRead(A5);
   Serial.print( "pot1 = " );
   Serial.print(sensorValue1);
   Serial.print("\t");
