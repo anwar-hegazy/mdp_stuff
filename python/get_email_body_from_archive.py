@@ -15,6 +15,7 @@ mailz = []
 archive = []
 clean_mails = ""
 msg =""
+log = ""
 
 os.chdir('/Users/cta/Desktop/email_test')
 for f in glob.glob('*.eml'):
@@ -27,7 +28,7 @@ for f in glob.glob('*.eml'):
 
 #for this in mailz:
 #for this in mailz:
-for this in itertools.islice(mailz, 0, 50):
+for this in itertools.islice(mailz, 50, 100):
     text = ""
 
     msg = email.message_from_string(str(this))
@@ -49,11 +50,17 @@ for this in itertools.islice(mailz, 0, 50):
                     text = unicode(part.get_payload(decode=True), str(charset), "ignore").encode('utf8', 'replace')
                     output1 = text.strip()
                     clean_mails = re.sub('(\\nOn(.*?)wrote:\\n)|(\>(.*?)\\n)|(\>(.*?)$)', '', output1)
-                    archive.append(clean_mails)
+                    cleaner_mails = re.sub('([^\<]+)\<','', clean_mails)
+                    archive.append(cleaner_mails)
 
+for i in archive:
+    fp2 = open('/Users/cta/Desktop/email_test/OUTPUT.txt', 'a')
+    fp2.write( ' ' + str(i) )
+    fp2.close()
+    print 'added another message!'
 
-                if part.get_content_type() == 'text/html':
-                    html = unicode(part.get_payload(decode=True), str(charset), "ignore").encode('utf8', 'replace')
-                    output1 = text.strip()
-                    clean_mails = re.sub('(\\nOn(.*?)wrote:\\n)|(\>(.*?)\\n)|(\>(.*?)$)', '', output1)
-                    archive.append(clean_mails)
+                # elif part.get_content_type() == 'text/html':
+                #     html = unicode(part.get_payload(decode=True), str(charset), "ignore").encode('utf8', 'replace')
+                #     output1 = text.strip()
+                #     clean_mails = re.sub('(\\nOn(.*?)wrote:\\n)|(\>(.*?)\\n)|(\>(.*?)$)', '', output1)
+                #     archive.append(clean_mails)
