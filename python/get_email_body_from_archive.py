@@ -14,6 +14,8 @@ import itertools
 mailz = []
 archive = []
 clean_mails = ""
+cleaner_mails = ""
+cleanest_mails = ""
 msg =""
 log = ""
 
@@ -27,8 +29,8 @@ for f in glob.glob('*.eml'):
 """
 
 #for this in mailz:
-#for this in mailz:
-for this in itertools.islice(mailz, 50, 100):
+for this in mailz:
+#for this in itertools.islice(mailz,  0, 10):
     text = ""
 
     msg = email.message_from_string(str(this))
@@ -49,12 +51,14 @@ for this in itertools.islice(mailz, 50, 100):
                 if part.get_content_type() == 'text/plain':
                     text = unicode(part.get_payload(decode=True), str(charset), "ignore").encode('utf8', 'replace')
                     output1 = text.strip()
-                    clean_mails = re.sub('(\\nOn(.*?)wrote:\\n)|(\>(.*?)\\n)|(\>(.*?)$)', '', output1)
-                    cleaner_mails = re.sub('([^\<]+)\<','', clean_mails)
-                    archive.append(cleaner_mails)
+                    clean_mails = re.sub('(\\nOn(.*?)wrote:\\n)|(\>(.*?)\\n)|(\>(.*?)$)', '', output1)  # gets rid of previous messages in body
+                    cleaner_mails = re.sub('^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$', '', clean_mails)    # gets rid of email addresses
+                    cleanest_mails = re.sub('\b([\d\w\.\/\+\-\?\:]*)((ht|f)tp(s|)\:\/\/|[\d\d\d|\d\d]\.[\d\d\d|\d\d]\.|www\.|\.tv|\.ac|\.com|\.edu|\.gov|\.int|\.mil|\.net|\.org|\<div class="biz"></div>\.info|\<div class="na"></div>me|\.pro|\.museum|\.co)([\d\w\.\/\%\+\-\=\&amp;\?\:\\\&quot;\'\,\|\~\;]*)\b', '', cleaner_mails )   # gets rid of url
+                    most_cleanest_mails = re.sub('([^\<]+)\<','', cleanest_mails)   # gets rid of anything that is left that is not something
+                    archive.append(most_cleanest_mails)
 
 for i in archive:
-    fp2 = open('/Users/cta/Desktop/email_test/OUTPUT.txt', 'a')
+    fp2 = open('/Users/cta/Desktop/email_test/OUTPUT2.txt', 'a')
     fp2.write( ' ' + str(i) )
     fp2.close()
     print 'added another message!'
