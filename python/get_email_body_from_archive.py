@@ -29,8 +29,8 @@ for f in glob.glob('*.eml'):
 """
 
 #for this in mailz:
-for this in mailz:
-#for this in itertools.islice(mailz,  0, 10):
+#for this in mailz:
+for this in itertools.islice(mailz,  11, 20):
     text = ""
 
     msg = email.message_from_string(str(this))
@@ -58,7 +58,7 @@ for this in mailz:
                     archive.append(most_cleanest_mails)
 
 for i in archive:
-    fp2 = open('/Users/cta/Desktop/email_test/OUTPUT2.txt', 'a')
+    fp2 = open('/Users/cta/Desktop/email_test/OUTPUT3.txt', 'a')
     fp2.write( ' ' + str(i) )
     fp2.close()
     print 'added another message!'
