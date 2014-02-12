@@ -100,6 +100,15 @@ void loop()  {
 }
 ```
 Open the Blink and Fade examples and compare/contrast them. Are there any key differences between the two?
+### Voltage Dividers
+
+A voltage divider is any circuit that produces an output that is a fraction of its input. For example:
+Inline-style:
+![voltage_divider.png](voltage_divider.png?raw=true)
+
+diagram for the most general picture of how to hook it up.
+
+In this case,
 ### Sensors
 Most sensor input follows a similar setup. Let's start with a Potentiometer.
 
