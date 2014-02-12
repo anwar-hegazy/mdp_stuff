@@ -206,3 +206,78 @@ void loop()
   delay(10);                     
 }
 ```
+### Smoothing
+
+Sensors are designed to output a changing voltages, but what happens if your sensor is too sensitive or you need to "massage" you data for some reason? We can define any unnecessary information, like the information provided by sensor y in either of the previous cases, as "noise." Certain sensors are so noisey that some amount of work needs to be done to make them not as "nearly random"/more usable. The code below shows one example of how to average x amount of Vin samples (in this case, 10 "samples" or ```Array``` positions) in order to smooth the input to something less chaotic. 
+
+Keep in mind, though, that the smaller the ```Array``` (i.e., the less positions in which it can store samples prior to averaging), the more prone to "noiseyness" your averaged data will be. At the same time, though, a smaller ```Array``` will take less time to fill, and therefore be able to output average amounts more quickly.
+
+On the other side of the spectrum, the longer your ```Array``` (i.e. the more position in which it can store samples prior to averaging), the more "smoothed" the data will be. For a particularly noisey sensor, this might be a good strategy (emphasis on "might"). However, the longer the ```Array```, the more positions need to be filled prior to averaging, which will therefore slow down the rate at which you are getting usable information into the Arduino.
+```
+/*
+
+  Smoothing
+
+  Reads repeatedly from an analog input, calculating a running average
+  and printing it to the computer.  Keeps ten readings in an array and 
+  continually averages them.
+  
+  The circuit:
+    * Analog sensor (potentiometer will do) attached to analog input 0
+
+  Created 22 April 2007
+  By David A. Mellis  <dam@mellis.org>
+  modified 9 Apr 2012
+  by Tom Igoe
+  http://www.arduino.cc/en/Tutorial/Smoothing
+  
+  This example code is in the public domain.
+
+
+*/
+
+
+// Define the number of samples to keep track of.  The higher the number,
+// the more the readings will be smoothed, but the slower the output will
+// respond to the input.  Using a constant rather than a normal variable lets
+// use this value to determine the size of the readings array.
+const int numReadings = 10;
+
+int readings[numReadings];      // the readings from the analog input
+int index = 0;                  // the index of the current reading
+int total = 0;                  // the running total
+int average = 0;                // the average
+
+int inputPin = A0;
+
+void setup()
+{
+  // initialize serial communication with computer:
+  Serial.begin(9600);                   
+  // initialize all the readings to 0: 
+  for (int thisReading = 0; thisReading < numReadings; thisReading++)
+    readings[thisReading] = 0;          
+}
+
+void loop() {
+  // subtract the last reading:
+  total= total - readings[index];         
+  // read from the sensor:  
+  readings[index] = analogRead(inputPin); 
+  // add the reading to the total:
+  total= total + readings[index];       
+  // advance to the next position in the array:  
+  index = index + 1;                    
+
+  // if we're at the end of the array...
+  if (index >= numReadings)              
+    // ...wrap around to the beginning: 
+    index = 0;                           
+
+  // calculate the average:
+  average = total / numReadings;         
+  // send it to the computer as ASCII digits
+  Serial.println(average);   
+  delay(1);        // delay in between reads for stability            
+}
+```
