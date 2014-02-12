@@ -108,7 +108,7 @@ A voltage divider is any circuit that produces an output that is a fraction of i
 
 The above diagram represents the most basic way to use two resistors (labeled as Z1 and Z2) to take some changing voltage (Vin) and output a fraction of it (Vout). The amount of Vin that is output at Vout depends on the values of the two resistors. This is the basic wiring pattern for almost any sensor input into a microcontroller.
 
-You are probably wondering how to calculate the value of z1 and z2 such that you can get a specific Vout. Here is the formula:
+You are probably wondering how to calculate the value of R1 and R2 (fyi: in this case, I am using Z and R interchangeably, but generally Z refers to impedance and R refers to resistance) such that you can get a specific Vout. Here is the formula:
 
 ![voltage_divider_formula.png](voltage_divider_formula.png?raw=true)
 
