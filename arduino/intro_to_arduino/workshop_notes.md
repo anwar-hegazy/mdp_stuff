@@ -6,7 +6,7 @@ note: unless otherwise noted, these examples come packaged with the arduino soft
 ### The Electronics
 (assumes usage of the Arduino Uno)
 
-This is meant as a basic overview of the Uno. For a more comprehensive overview, see [here](http://arduino.cc/en/Main/ArduinoBoardUno).
+For a comprehensive overview of the Uno, go [here](http://arduino.cc/en/Main/ArduinoBoardUno).
 
 The Uno is based on the ATmega328, the datasheet for which you can find [here](http://www.atmel.com/Images/doc8161.pdf).
 
