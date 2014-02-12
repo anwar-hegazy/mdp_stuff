@@ -63,6 +63,43 @@ Hopefully the next two lines of code now make sense: the LED is turned off, and 
 
 When using ```delay()```, all other functions/processes happening in your program will be paused. In other words, nothing happens during a ```delay()```. So, though this is fine for a simple blinking LED, if you were trying to control the time-flow of simultaneous functions at different intervals, you would want to use ```millis()```. The Arduino website recommends avoiding the use of ```delay()``` unless you are only pausing the program for 10s of milliseconds, favoring ```millis()``` for more substantial, human-noticeable amounts of time.
 
+### Fade
+```/*
+ Fade
+ 
+ This example shows how to fade an LED on pin 9
+ using the analogWrite() function.
+ 
+ This example code is in the public domain.
+ */
+
+int led = 9;           // the pin that the LED is attached to
+int brightness = 0;    // how bright the LED is
+int fadeAmount = 5;    // how many points to fade the LED by
+
+// the setup routine runs once when you press reset:
+void setup()  { 
+  // declare pin 9 to be an output:
+  pinMode(led, OUTPUT);
+} 
+
+// the loop routine runs over and over again forever:
+void loop()  { 
+  // set the brightness of pin 9:
+  analogWrite(led, brightness);    
+
+  // change the brightness for next time through the loop:
+  brightness = brightness + fadeAmount;
+
+  // reverse the direction of the fading at the ends of the fade: 
+  if (brightness == 0 || brightness == 255) {
+    fadeAmount = -fadeAmount ; 
+  }     
+  // wait for 30 milliseconds to see the dimming effect    
+  delay(30);                            
+}
+```
+Open the Blink and Fade examples and compare/contrast them. Are there any key differences between the two?
 ### Sensors
 Most sensor input follows a similar setup. Let's start with a Potentiometer.
 
