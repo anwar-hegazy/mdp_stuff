@@ -165,7 +165,7 @@ We can use this basic framework for most other sensor input, the only thing that
 
 *homework:* Download the pdf [here](http://caseythomasanderson.com/casey/sensor_workshop_notes.pdf) and try to use the above patch with other sensors.
 
-As an example: modifying out potentiometer code to utilize a flex sensor:
+As an example: modifying our potentiometer code to utilize a flex sensor:
 ```
 // Flex sensor test program
 
