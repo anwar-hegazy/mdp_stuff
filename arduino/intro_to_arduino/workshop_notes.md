@@ -8,7 +8,7 @@ note: unless otherwise noted, these examples come packaged with the arduino soft
 
 This is meant as a basic overview of the Uno. For a more comprehensive overview, see [here](http://arduino.cc/en/Main/ArduinoBoardUno).
 
-The Uno is based on the ATmega328, the datasheet for which you can find [here](http://www.atmel.com/Images/doc8161.pdf)
+The Uno is based on the ATmega328, the datasheet for which you can find [here](http://www.atmel.com/Images/doc8161.pdf).
 
 Get used to looking for datasheets. They are generally published by the manufacturer as a complete resource for how a particular Integrated Circuit functions, containing things like detailed information regarding Current, Voltage, etc. features/requirements, as well as the role of each pin. Any time you are trying to build something that requires an IC you have not used before your first step should be to look for the datasheet. This is almost always accomplished via a simple Google search (example: ATmega328 datasheet).
 
