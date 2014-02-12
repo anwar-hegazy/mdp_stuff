@@ -103,12 +103,11 @@ Open the Blink and Fade examples and compare/contrast them. Are there any key di
 ### Voltage Dividers
 
 A voltage divider is any circuit that produces an output that is a fraction of its input. For example:
-Inline-style:
+
 ![voltage_divider.png](voltage_divider.png?raw=true)
 
-diagram for the most general picture of how to hook it up.
+The above diagram represents the most basic way to use two Resistors (labeled as Z1 and Z2) to take some changing voltage (Vin) and output a fraction of it (Vout). The amount of Vin that is output at Vout depends on the values of the two Resistors. This is the basic pattern for all sensor input into a microcontroller.
 
-In this case,
 ### Sensors
 Most sensor input follows a similar setup. Let's start with a Potentiometer.
 
