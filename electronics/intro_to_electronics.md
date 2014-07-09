@@ -1,4 +1,4 @@
-### Intro to Electronics
+## Intro to Electronics
 *Summer 2014, Casey Anderson*
 
 Electricity = the flow of electrons.
@@ -19,13 +19,13 @@ This example is analagous to electricity, however the "dust specks" are electron
 
 What else would one need to measure to be able to specifically describe the behavior of the water tank example?
 
-1. "Flow Rate"
+### "Flow Rate"
   * Measured as a volume of water flowing through the pipe during a defined period of time.
   * In electronics, the flow rate is referred to as Current (symbol: I)
   * Current is measured in amperes (or amps, symbol: A)
   * 1 amp = the quantity of 1 coulomb (unit of measurement describing the number of electrons, i.e. amount of "charge") passing a point in one second
 
-2. "Flow Pressure":
+### "Flow Pressure"
   * Imagine that the building, in Example 1, is three stories in one scenario and one story in another. How would one described the difference between these two scenarios?
   * The energy contained in the water in the tank defines the water pressure. In other words, the higher the water tank, the more energy potentially exists if it were to flow.
   * In electronics, flow pressure is defined by the difference in numbers of electrons between two points.
@@ -49,7 +49,7 @@ As a subtle alteration to this example, disconnect the battery from the lightbul
   * There is no electron flow
   * Air, an insulator, prevents electrons from jumping from one conductor (i.e. wire) to the other.
 
-3. Flow ease
+### Flow ease
 
 
 Resistors
