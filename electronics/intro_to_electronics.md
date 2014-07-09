@@ -10,30 +10,29 @@ There is a large tank of water (atop a very tall building). This tank has a pipe
 
 The water in the tank has an evenly distributed number of dust particles in it (in this case, 10 specks of dust in ever cubic centimeter of water).
 
-If x amount of water flows through the pipe, we can calculate the number of specks of dust which have flowed through the pipe.
+Since the dust particles are evenly distributed, one can draw some conclusions from the above scenario:
 
--or-
+1. If x amount of water flows through the pipe, one can calculate the number of specks of dust which have flowed through the pipe.
+2. By knowing the number of specks of dust which have flowed through the pipe, one can calculate the volume of water.
 
-By knowing the number of specks of dust which have flowed through the pipe, we can calculate the volume of water.
+This example is analagous to electricity, however the "dust specks" are electrons.
 
-This is the same with electricity, but instead is measured in coulombs. In this case, the dust specks are electrons.
+What else would one need to measure to be able to specifically describe the behavior of the water tank example?
 
-How would we measure the rate at which the water flows through the pipe and into the bucket?
+1. "Flow Rate"
+  * The flow rate would be measured as a volume of water flowing through the pipe during a defined period of time.
+  * In electronics, the flow rate is referred to as Current (symbol: I)
+  * Current is measured in amperes (or amps, symbol: A)
+  * 1 amp = the quantity of 1 coulomb (unit of measurement describing the number of electrons, i.e. amount of "charge") passing a point in one second
 
-The “flow rate” would be measured as some volume of water which flowed through the pipe during a defined period of time.
+2. "Flow Pressure":
+  * Imagine that the building, in the earlier example, is three stories in one scenario and one story in another. How would one described the difference between these two scenarios?
+  * The energy contained in the water in the tank defines the water pressure. In other words, the higher the water tank, the more energy potentially exists if it were to flow.
+  * In electronics, flow pressure is defined by the difference in numbers of electrons between two points.
+  * This is referred to as the potential difference, but is generally simply denoted by the term Voltage (symbol: V). Potential Difference and Voltage refer to the SAME electrical characteristic.
+  * The word "potential" is key in one's understanding of Voltage. Example, regardless of whether or not a 9V battery is in use, it POTENTIALLY has a 9V difference between its two terminals regardless of whether it is in use or not.
+  * In other words, the battery has the potential to drive an electronc through a circuit due to its 9V difference in charge.
 
-But in our case we refer to flow rate as current, denoted by the symbol I (just imagine that it stands for “intensity”).
-
-Electric Current is measure in amperes (or amps, symbol: A)
-
-1 amp = the quantity of 1 coulomb passing a point in one second.
-
-What else would be useful to know about our tank of water, tube, and bucket?
-Flow pressure
-
-Thinking back to our earlier example, we could imagine the building is three stories in one scenario and one story in another. What would be the difference between these two scenarios?
-
-The energy contained in the water in the tank defines the water pressure. In other words, the higher the water tank, the more energy potentially exists if it were to flow.
 
 With electricity, flow pressure is defined by the difference in numbers of electrons between two points. We refer to this as a potential difference because the difference depends on the positions of the points and how many electrons potentially exist.
 
