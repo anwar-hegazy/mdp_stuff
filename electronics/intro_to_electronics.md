@@ -5,12 +5,12 @@ Electricity = the flow of electrons.
 
 In order to measure electricity, one needs to be able to figure out the number of electroncs in "the flow."
 
-*For Example*
+*Example 1*
 There is a large tank of water (atop a very tall building). This tank has a pipe coming out of it that is capable of distributing water to a small bucket on the ground below (next to the building). For the time being, the pipe has a stopper of some sort in one end.
 
 The water in the tank has an evenly distributed number of dust particles in it (in this case, 10 specks of dust in ever cubic centimeter of water).
 
-Since the dust particles are evenly distributed, one can draw some conclusions from the above scenario:
+Since the dust particles are evenly distributed, one can confidently deduce the following:
 
 1. If x amount of water flows through the pipe, one can calculate the number of specks of dust which have flowed through the pipe.
 2. By knowing the number of specks of dust which have flowed through the pipe, one can calculate the volume of water.
@@ -20,44 +20,37 @@ This example is analagous to electricity, however the "dust specks" are electron
 What else would one need to measure to be able to specifically describe the behavior of the water tank example?
 
 1. "Flow Rate"
-  * The flow rate would be measured as a volume of water flowing through the pipe during a defined period of time.
+  * Measured as a volume of water flowing through the pipe during a defined period of time.
   * In electronics, the flow rate is referred to as Current (symbol: I)
   * Current is measured in amperes (or amps, symbol: A)
   * 1 amp = the quantity of 1 coulomb (unit of measurement describing the number of electrons, i.e. amount of "charge") passing a point in one second
 
 2. "Flow Pressure":
-  * Imagine that the building, in the earlier example, is three stories in one scenario and one story in another. How would one described the difference between these two scenarios?
+  * Imagine that the building, in Example 1, is three stories in one scenario and one story in another. How would one described the difference between these two scenarios?
   * The energy contained in the water in the tank defines the water pressure. In other words, the higher the water tank, the more energy potentially exists if it were to flow.
   * In electronics, flow pressure is defined by the difference in numbers of electrons between two points.
   * This is referred to as the potential difference, but is generally simply denoted by the term Voltage (symbol: V). Potential Difference and Voltage refer to the SAME electrical characteristic.
   * The word "potential" is key in one's understanding of Voltage. Example, regardless of whether or not a 9V battery is in use, it POTENTIALLY has a 9V difference between its two terminals regardless of whether it is in use or not.
-  * In other words, the battery has the potential to drive an electronc through a circuit due to its 9V difference in charge.
+  * In other words, the battery has the potential to drive an electron through a circuit due to its 9V difference in charge.
 
+*Example 2*
+A battery powers a small lightbulb.
+This could be described as series of actions:
 
-With electricity, flow pressure is defined by the difference in numbers of electrons between two points. We refer to this as a potential difference because the difference depends on the positions of the points and how many electrons potentially exist.
+  * The battery generates electrons at one terminal and takes in electrons at the other terminal
+  * The bulb lights up as electrons flow around the circuit
+  * The electrons flow around the circuit due to potential difference of battery
 
-Let's imagine another scenario in which we have a battery powering a small lightbulb. We could describe the order of events as follows:
+Batteries force electrons around a circuit only when the circuit is complete. If one end of the battery is not connected there will be no electron flow, but the battery will still have the POTENTIAL to cause such a flow upon completion of the circuit. The higher the battery's voltage, the harder a cell can force electrons around a circuit.
 
-1. battery generates electrons at one terminal and takes in electrons at the other terminal
-2. bulb lights up as electrons flow around the circuit
-3. electrons flow around the circuit due to potential difference of battery
+As a subtle alteration to this example, disconnect the battery from the lightbulb. Such an action results in the following changes to our circuit:
 
-A battery forces electrons around a circuit only when the circuit is complete. If it is not connected, no electrons flow, but the battery still has the POTENTIAL to make them flow.
+  * The bulb does not light up
+  * There is no electron flow
+  * Air, an insulator, prevents electrons from jumping from one conductor (i.e. wire) to the other.
 
-If we were to disconnect the circuit, the scenario would change as follows:
+3. Flow ease
 
-1. Even though battery is not connected to the bulb, it still has the potential to light the bulb
-2. Bulb is not lit up, no electrons flow
-3. The circuit is disconnected, so no electrons can flow
-
-Since the two terminals are not connected via the circuit, electrons cannot flow. Air, an insulator, prevents them from jumping from one conductor to the other.
-
-Nonetheless, a battery has the POTENTIAL to light the bulb and so the difference in numbers of electrons between two points (terminals) is known as the potential difference.
-
-This is normally referred to as voltage, or volts, and normally symbolized with a V.
-
-The higher the voltage, the harder a cell can force electrons around a circuit
-  so, voltage is a way of expressing electrical pushing power.
 
 Resistors
 used to control current and voltage in specified ways
