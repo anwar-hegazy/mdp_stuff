@@ -1,18 +1,14 @@
 ### Intro to Electronics
-*Disney, Casey Anderson*
+*Summer 2014, Casey Anderson*
 
-Working in the Arduino environment necessarily involves at least a basic understanding of electronics.
+Electricity = the flow of electrons.
 
-So, What is electricity?
+In order to measure electricity, one needs to be able to figure out the number of electroncs in "the flow."
 
-Electricity is any flow of electrons
+*For Example*
+There is a large tank of water (atop a very tall building). This tank has a pipe coming out of it that is capable of distributing water to a small bucket on the ground below (next to the building). For the time being, the pipe has a stopper of some sort in one end.
 
-How do we measure electricity? Or, what are we referring to when we measure?
-We need to be able to say how many electrons were in the flow.
-
-For example, let's think of the flow of water through a pipe. More specifically, let's imagine that we have a tank of water (atop a tall building), a pipe coming out of it, and a bucket of water. What would we want to know about these things?
-
-Furthermore, let's say that the water has an evenly distributed number of dust particles in it. For example, there are 10 specks of dust in ever cubic centimeter of water...
+The water in the tank has an evenly distributed number of dust particles in it (in this case, 10 specks of dust in ever cubic centimeter of water).
 
 If x amount of water flows through the pipe, we can calculate the number of specks of dust which have flowed through the pipe.
 
