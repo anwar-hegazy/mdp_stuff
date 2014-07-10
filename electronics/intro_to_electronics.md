@@ -17,8 +17,6 @@ Since the dust particles are evenly distributed, one can confidently deduce the 
 
 This example is analagous to electricity, however the "dust specks" are electrons.
 
-What else would one need to measure to be able to specifically describe the behavior of the water tank example?
-
 ### "Flow Rate"
   * Measured as a volume of water flowing through the pipe during a defined period of time.
   * In electronics, the flow rate is referred to as Current (symbol: I)
@@ -35,7 +33,7 @@ What else would one need to measure to be able to specifically describe the beha
 
 *Example 2*
 A battery powers a small lightbulb.
-This could be described as series of actions:
+This could be described as series of related actions:
 
   * The battery generates electrons at one terminal and takes in electrons at the other terminal
   * The bulb lights up as electrons flow around the circuit
@@ -49,7 +47,7 @@ As a subtle alteration to this example, disconnect the battery from the lightbul
   * There is no electron flow
   * Air, an insulator, prevents electrons from jumping from one conductor (i.e. wire) to the other.
 
-### Flow ease
+### "Flow ease"
 
 
 Resistors
