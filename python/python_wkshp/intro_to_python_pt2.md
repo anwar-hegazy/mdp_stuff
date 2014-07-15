@@ -10,11 +10,7 @@ For example, a car contains a computer capable of performing a complex series of
 
 Another good example of object orientation: painters do not design a new (set of) paintbrush(es), from scratch, for every single painting they create. Instead, a painter has certain paint brushes usable for a general task (for example, broad brush strokes) applicable across any painting requiring such a stroke. This is a good example of abstraction and generalization, and can become a powerful way of thinking when programming.
 
-## Datatypes
-
-There are a handful of datatypes in Python: strings, integers, floating point numbers, and boolean.
-
-*Strings*
+## Strings
 
 any character surrounded by quotes. Quotes must be balanced. In other words, I could say
 
@@ -102,7 +98,7 @@ In [11]: a
 Out[11]: 'THIS'
 ```
 
-*Integers/Floats*
+## Integers/Floats
 
 There are two basic types of numbers: integers and floating point numbers (floats for short). Integers are any whole number (positive or negative), whereas floats are any number with a decimal point. Try this:
 
@@ -155,7 +151,7 @@ NameError: name 'x' is not defined
 
 Nonetheless, variables, once assigned (and therefore established as a particular type), can be converted to other data types. For example:
 ```
-<pre>In [21]: a = 5
+In [21]: a = 5
 
 In [22]: float(a)
 Out[22]: 5.0
@@ -183,21 +179,26 @@ Individual items in a list are referenced by their index, or position. We can re
 ```
 In [27]: a[0]
 Out[27]: 'spam'
-</pre>
-<pre>In [28]: a[3]
+In [28]: a[3]
 Out[28]: 1234
-</pre>
-<pre>In [29]: a[:2]
-Out[29]: ['spam', 'eggs']</pre>
-<br/>Individual items/elements in a string can be rewritten as follows:
-<pre>In [30]: a[1] = 2
+In [29]: a[:2]
+Out[29]: ['spam', 'eggs']
+```
+
+Individual items/elements in a string can be rewritten as follows:
+```
+In [30]: a[1] = 2
 
 In [31]: a
-Out[31]: ['spam', 2, 100, 1234]</pre>
-<br/>If we do not happen to know how long a particular string is, we can make the interpreter figure it out be calling len() on it:
-<pre>In [32]: len(a)
-Out[32]: 4</pre>
-<br/><i>if statements</i>
+Out[31]: ['spam', 2, 100, 1234]
+```
+
+If we do not happen to know how long a particular string is, we can make the interpreter figure it out be calling `len()` on it:
+```
+In [32]: len(a)
+Out[32]: 4
+```
+## if statements
 Let's take a look at a nice example of a function that contains Boolean Logic (true or false datatypes)
 <pre>In [34]: x = int(input('please enter an integer: ') )
 please enter an integer: 42
