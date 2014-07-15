@@ -80,7 +80,11 @@ pip install Flask
 pip install ipython
 ```
 
-To test to make sure everything works, run ipython from the terminal by typing the following: ```ipython```
+To test to make sure everything works, run ipython from the terminal by typing the following:
+
+```
+ipython
+```
 
 And then try to import one of the modules we installed. For example:
 
