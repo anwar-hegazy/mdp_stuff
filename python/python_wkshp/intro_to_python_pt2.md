@@ -176,7 +176,7 @@ In [26]: a
 Out[26]: ['spam', 'eggs', 100, 1234]
 ```
 
-Individual items in a list are referenced by their index, or position. We can reference individual items by enter the variable and the position (counting from 0) into the interpreter.
+Individual items in a list are referenced by their index, or position. We can reference individual items by entering the variable and the position (counting from 0) into the interpreter.
 *For example:*
 ```
 In [27]: a[0]
@@ -202,26 +202,32 @@ Out[32]: 4
 ```
 ## if statements
 Let's take a look at a nice example of a function that contains Boolean Logic (true or false datatypes)
-<pre>In [34]: x = int(input('please enter an integer: ') )
-please enter an integer: 42
 
-In [35]: if x < 0:
-....: x = 0
-....: print 'negative changed to zero'
-....: elif x == 0:
-....: print 'Zero'
-....: elif x == 1:
-....: print 'single'
-....: else:
-....: print 'more'
-....:
-more
-</pre>
-<br/>Quite a bit to talk about here. Let's break it down line by line.
-We called a statement that takes any input at the command line, converts it to an int, and assigns it to the variable x. After that, we start our test. If x is less than 0, set x to 0 and print the statement 'negative changed to zero'. Elif (means else if) x RETURNS 0, print zero. Else if x returns 1, print single. If none of those things are the case (the final else), print the string more.
-<br/>Before you try to type this in, notice the whitespace. Python groups statements together (in functions like this one, or otherwise) via whitespace. The normal Python protocol is to use four spaces to denote the first line belonging to a previous one (the line under the first if statement), or you can use indents.
-<br/>Try to enter this into your interpreter with a different input value (not 42).
-<br/><i>for statements</i>
+```
+x = int(input('please enter an integer: ') )
+
+if x < 0:
+    x = 0
+    print 'negative changed to zero'
+elif x == 0:
+    print 'Zero'
+elif x == 1:
+    print 'single'
+else:
+    print 'more'
+```
+
+Quite a bit to talk about here. Let's break it down line by line:
+
+1. We called a statement that takes any input at the command line, converts it to an `int`, and assigns it to the variable `x`.
+2. After that, we start our test. If `x` is less than 0, set `x` to 0 and `print` the statement 'negative changed to zero'.
+3. `Elif` (means else if) `x` RETURNS 0, `print` zero. Else if `x` returns 1, `print` single. If none of those things are the case (the final `else`), print the string more.
+
+Before you try to type this in, notice the whitespace. Python groups statements together (in functions like this one, or otherwise) via whitespace. The normal Python protocol is to use four spaces to denote the first line belonging to a previous one (the line under the first if statement), or you can use indents.
+
+Try to enter this into your interpreter with a different input value (not 42).
+
+## for statements
 Type this into your interpreter:
 <pre>In [36]: words = ['cat', 'widow', 'defenstrate']
 
