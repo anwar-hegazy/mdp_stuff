@@ -13,7 +13,10 @@ Another good example of object orientation: painters do not design a new (set of
 ## Datatypes
 
 There are a handful of datatypes in Python: strings, integers, floating point numbers, and boolean.
-### Strings: any character surrounded by quotes. Quotes must be balanced. In other words, I could say
+
+*Strings*
+
+any character surrounded by quotes. Quotes must be balanced. In other words, I could say
 
 ```
 a = 'this'
@@ -25,114 +28,159 @@ a = 'this
 
 Similarly, if we are going to declare a variable as a string, we have to use quotes.
 
-```a = this
+```
+a = this
 #does not work because the word this is not defined.
 ```
 
 Python allows for numerous manipulations to strings. More specifically, if we go back to our original example:
 
-```a = 'this'```
+```
+a = 'this'
+```
 
 We could use various operations on it to get various information from our variable containing the string 'this'.
 
-For example:
+*For example:*
 
-```In [4]: len(a)
+```
+In [4]: len(a)
 Out[4]: 4
 ```
 
 We could also say:
 
-```In [5]: type(a)
+```
+In [5]: type(a)
 Out[5]: str    # str is short for string
 ```
 
-Lastly, we can only return part of the string by doing the following:
-<pre>In [6]: a[:3]
+Lastly, we can return a part of the string by doing the following:
+
+```
+In [6]: a[:3]
 Out[6]: 'thi'
-</pre>
-<br/>Similarly, we can see what other functions are possible with a by entering this into the terminal.
-<pre>a.[tab]</pre>
-<br/>This is a good strategy for working with iPython in general. Any time I get a new package/module, the first thing I do (after importing it) is to type its name followed by a period and then tab.
-<br/>From this list, we can type out any of the functions followed by a ? to see a brief description of what it does.
-<br/>For example:
-<pre>In [7]: a.upper?
+```
+
+Similarly, we can see what other functions are possible with a by entering `a.<TAB>` into the terminal.
+
+This is a good strategy for working with iPython in general. Any time I get a new package/module, the first thing I do (after importing it) is to type its name followed by a period and then tab.
+
+From this list, we can type out any of the functions followed by a `?` to see a brief description of what it does.
+*For example:*
+
+```
+In [7]: a.upper?
 Type:       builtin_function_or_method
 String Form:<built-in method upper of str object at 0x104488750>
 Docstring:
 S.upper() -> string
 
 Return a copy of the string S converted to uppercase.
-</pre>
-<br/>So let's convert our string, contained in the variable a, to an entirely capitalized version of itself. Try this:
-<pre>In [8]: a.upper()
+```
+
+So let's convert our string, contained in the variable `a`, to a capitalized version of itself. Try this:
+
+```
+In [8]: a.upper()
 Out[8]: 'THIS'
-</pre>
-<br/>However, if you try this:
-<pre>In [9]: a
+```
+
+However, if you try this:
+
+```
+In [9]: a
 Out[9]: 'this'
-</pre>
-<br/>So, if we wanted to permanently change a, we could do this:
-<pre>In [10]: a = a.upper()
+```
+
+So, if we wanted to permanently change a, we could do this:
+
+```
+In [10]: a = a.upper()
 
 In [11]: a
 Out[11]: 'THIS'
-</pre>
-<br/><i>Integers/Floats</i>
+```
+
+*Integers/Floats*
+
 There are two basic types of numbers: integers and floating point numbers (floats for short). Integers are any whole number (positive or negative), whereas floats are any number with a decimal point. Try this:
-<pre>In [12]: a = 5
+
+```
+In [12]: a = 5
 
 In [13]: type(a)
 Out[13]: int
-</pre>
-<br/>Whereas:
-<pre>In [14]: a = 4.0
+```
+
+Whereas:
+```
+In [14]: a = 4.0
 
 In [15]: type(a)
 Out[15]: float
-</pre>
-<br/>If you want to, you could now enter a.[tab] to see what other methods a (the variable that now stores a floating point number [4.0]) has.
-<br/>Assignment operator, more variables
-In Python, = does not mean what you would normally think it does. Our previous example:
-<pre>In [16]: a = 4.0</pre>
-<br/>Means “assign 4.0” to the variable named a. This is why we cannot say the following:
-<br/>In [17]: 5 = 6
+```
+
+If you want to, you could now enter `a.<TAB>` to see what other methods `a` (the variable that now stores a floating point number [4.0]) has.
+
+## Assignment operator, more variables
+
+In Python, `=` does not mean what you would normally think it does. Our previous example:
+```
+In [16]: a = 4.0
+```
+
+Means “assign 4.0” to the variable named `a`. This is why we cannot say the following:
+```
+In [17]: 5 = 6
   File "<ipython-input-17-6d9c0c29354b>", line 1
     5 = 6
 SyntaxError: can't assign to literal
-</pre>
-<br/>So a 6 can never be assigned (or put inside) a 5, so this line of code will always throw an error.
-<br/>Variables must be assigned prior to their use, otherwise python throws an error because it does not understand what you want it to do.
-<br/>Try this:
-<pre>In [18]: x
+```
+
+So a 6 can never be assigned (or put inside) a 5, so this line of code will always throw an error.
+
+Variables must be assigned prior to their use, otherwise python throws an error because it does not understand what you want it to do.
+
+Try this:
+```
+In [18]: x
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
 <ipython-input-18-401b30e3b8b5> in <module>()
 ----> 1 x
 
 NameError: name 'x' is not defined
-</pre>
-<br/>Nonetheless, variables, once assigned (and therefore established as a particular type), can be converted to other data types. For example:
+```
+
+Nonetheless, variables, once assigned (and therefore established as a particular type), can be converted to other data types. For example:
+```
 <pre>In [21]: a = 5
 
 In [22]: float(a)
 Out[22]: 5.0
-</pre>
-<br/>Or similarly:
-<pre>In [23]: a = 4.9
+```
+
+Or similarly:
+```
+In [23]: a = 4.9
 
 In [24]: int(a)
 Out[24]: 4
-</pre>
-<br/><i>Lists</i>
+```
+## Lists
+
 A compound data type used to group together other values. A list is written as a series of comma-separated values (or items) between square brackets. They do not need to be of uniform type. For example:
-<pre>In [25]: a = ['spam', 'eggs', 100, 1234]
+```
+In [25]: a = ['spam', 'eggs', 100, 1234]
 
 In [26]: a
-Out[26]: ['spam', 'eggs', 100, 1234]</pre>
-<br/>Individual items in a list are referenced by their index, or position. We can reference individual items by enter the variable and the position (counting from 0) into the interpreter.
-<br/>For example:
-</pre>
+Out[26]: ['spam', 'eggs', 100, 1234]
+```
+
+Individual items in a list are referenced by their index, or position. We can reference individual items by enter the variable and the position (counting from 0) into the interpreter.
+*For example:*
+```
 In [27]: a[0]
 Out[27]: 'spam'
 </pre>
