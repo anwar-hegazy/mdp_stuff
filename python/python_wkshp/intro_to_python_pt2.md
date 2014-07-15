@@ -1,8 +1,10 @@
 # An introduction to Python (pt. 2, Programming)
 
+*Note: anything in between carrots ( `<` to `>`) denotes user input.
+
 ## Intro to Python
 
-Python is a general-purpose, interpreted high-level programming language. The syntax of the language has been optimized to emphasize code readability, as well as brevity. Python supports many different programming approaches, but the one to focus on, should you choose to work with this language more thoroughly in the future, is object orientation.
+Python is a general-purpose, interpreted, high-level programming language. The syntax of the language has been optimized to emphasize code readability, as well as brevity. Python supports many different programming approaches, but the one to focus on, should you choose to work with this language more thoroughly in the future, is object orientation.
 
 Object orientation is a programming philosophy/paradigm based around objects, consisting of data fields and methods, and their interactions. The common assumption for any object is that it is capable of accepting some sort of input and producing some sort of output. Generally, one object is designed to perform a generalized, abstract function, that is context independent.
 
