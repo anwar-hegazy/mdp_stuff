@@ -1,6 +1,7 @@
 # An introduction to Python
 
 *Quick reference links*
+
 [Homebrew](http://brew.sh/)
 [iPython](http://ipython.org/)
 [Pip](http://pypi.python.org/pypi/pip)
