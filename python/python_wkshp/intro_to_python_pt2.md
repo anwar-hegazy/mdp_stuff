@@ -1,104 +1,28 @@
-# An introduction to Python
+# An introduction to Python (pt. 2, Programming)
 
-* Quick reference links*
+## Intro to Python
 
-[Homebrew](http://brew.sh/)
-
-[iPython](http://ipython.org/)
-
-[Pip](http://pypi.python.org/pypi/pip)
-
-[Sublime Text 2](http://www.sublimetext.com/2)
-
-[iTerm2](http://www.iterm2.com/) (I actually prefer this to the Mac OSX Terminal, but either is fine)
-
-## XCode
-
-Download, and install, Xcode from the app store (this takes forever, so please do it prior to the workshop).
-
-You also need Apple Developer Tools (in the Mac App store) and the Command Line Developer Tools (on the Apple Developer website). Go to the [Apple Developer](https://developer.apple.com/) site and register for a free account (if you do not already have one), then search for them to download both of the aforementioned plugins.
-
-While we are at it, go to Applications>Utilities>Terminal and run the Terminal application. We are going to be using it a lot, so I would recommend adding it to your dock for quick access.
-
-## Homebrew
-Install Homebrew by entering this into the Terminal:
-
-```
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-```
-
-When it is done, you can run ```brew update``` and then ```brew doctor``` in the terminal to make sure everything is working correctly (Homebrew will tell you if not).
-
-Additionally, you need to add the Homebrew directory to your system path. In the terminal, type ```cd``` and hit enter to go to your user directory. Now type ```nano .bash_profile``` and paste this into the file:
-
-```
-export PATH=/usr/local/bin:$PATH
-```
-
-Now restart the Terminal.
-
-<br/><i>Python</i>
-You may have noticed that there are multiple versions of Python available online (2.7.something and 3). We are going to focus on version 2.7.3, which you can easily install, via Homebrew, by typing the following into the command line:
-<pre>
-brew install python
-</pre>
-<br/>This will also install Pip, which is a great package manager specifically for Python.
-<br/>After installing Python, go to your .bash_profile file and add the following:
-<pre>
-export PATH=/usr/local/share/python:$PATH
-</pre>
-<br/>To confirm that everything is in order, type <pre>which python</pre> in the Terminal and hit enter. If everything is working correctly, the Terminal will return <pre>/usr/local/bin/python</pre>.
-<br/><i>everything else</i>
-Okay, so now we are going to install a handful of other things that will be useful when programming in Python. They are as follows: virtualenv, virtualenvwrapper,numpy, scipy, and iPython.
-<br/><i>virtualenv and virtualenvwrapper</i>
-<pre>
-pip install virtualenv
-pip install virtualenvwrapper
-</pre>
-<br/><i>Numpy</i>
-<pre>
-pip install numpy
-</pre>
-<br/><i>SciPy</i>
-<pre>
-brew install gfortran
-pip install scipy
-</pre>
-<br/><i>Flask</i>
-<pre>
-pip install Flask
-</pre>
-<br/><i>iPython</i>
-<pre>
-pip install ipython
-</pre>
-<br/>Finally, let's install <a href="http://opencv.willowgarage.com/wiki/Mac_OS_X_OpenCV_Port">openCV</a>:
-<pre>
-brew install opencv
-</pre>
-<br/>To test to make sure everything works, run ipython from the terminal by typing the following:
-<br/>ipython
-<pre>
-In [1]: import cv
-In [2]: cv.[tab]
-</pre>
-<br/>If you get a long list of methods, you did it correctly. If not, review the steps above and make sure you did not actually skip anything.
-<br/>Last but not least, we are going to need access to a text editor of some sort. There are lots of options, but the two I normally recommend are <a href="http://macromates.com/">TextMate</a> or <a href="http://www.sublimetext.com/">SublimeText</a>. I use SublimeText, but you can use whatever you want. Nonetheless, you will need a text editor, that frequently will be open right next to your Terminal window, for any serious programming.
-<br/><i>Intro to Python</i>
 Python is a general-purpose, interpreted high-level programming language. The syntax of the language has been optimized to emphasize code readability, as well as brevity. Python supports many different programming approaches, but the one to focus on, should you choose to work with this language more thoroughly in the future, is object orientation.
-<br/>Object orientation is a programming philosophy/paradigm based around objects, consisting of data fields and methods, and their interactions. The common assumption for any object is that it is capable of accepting some sort of input and producing some sort of output. Generally, one object is designed to perform a generalized, abstract function, that is context independent.
-<br/>For example, a car contains a computer capable of performing a complex series of calculations during its operations. Nonetheless, we do not need to understand every single thing going on inside of the car in order to be able to effectively drive it. We simply need to know that we can change the direction of the car with the steering wheel, increase the speed of the car with the gas pedal, and decrease the speed with the brake.
-<br/>Another good example of object orientation: painters do not design a new (set of) paintbrush(es), from scratch, for every single painting they create. Instead, a painter has certain paint brushes usable for a general task (for example, broad brush strokes) applicable across any painting requiring such a stroke. This is a good example of abstraction and generalization, and can become a powerful way of thinking when programming.
-<br/><i>Datatypes</i>
+
+Object orientation is a programming philosophy/paradigm based around objects, consisting of data fields and methods, and their interactions. The common assumption for any object is that it is capable of accepting some sort of input and producing some sort of output. Generally, one object is designed to perform a generalized, abstract function, that is context independent.
+
+For example, a car contains a computer capable of performing a complex series of calculations during its operations. Nonetheless, we do not need to understand every single thing going on inside of the car in order to be able to effectively drive it. We simply need to know that we can change the direction of the car with the steering wheel, increase the speed of the car with the gas pedal, and decrease the speed with the brake.
+
+Another good example of object orientation: painters do not design a new (set of) paintbrush(es), from scratch, for every single painting they create. Instead, a painter has certain paint brushes usable for a general task (for example, broad brush strokes) applicable across any painting requiring such a stroke. This is a good example of abstraction and generalization, and can become a powerful way of thinking when programming.
+
+*Datatypes*
+
 There are a handful of datatypes in Python: strings, integers, floating point numbers, and boolean.
-<br/>Strings: any character surrounded by quotes. Quotes must be balanced. In other words, I could say
-<pre>a = 'this'
+* Strings: any character surrounded by quotes. Quotes must be balanced. In other words, I could say
+..```
+a = 'this'
 a = “this”
 #but not:
 a = 'this
 #See the difference there?
-</pre>
-<br/>Similarly, if we are going to declare a variable as a string, we have to use quotes.
+```
+
+Similarly, if we are going to declare a variable as a string, we have to use quotes.
 <pre>a = this
 #does not work because the word this is not defined.
 </pre>
