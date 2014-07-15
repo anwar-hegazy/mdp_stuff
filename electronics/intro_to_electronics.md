@@ -62,4 +62,4 @@ Ohm's Law
 
 Another way to remember all formulations of Ohm's Law:
 
-[ohms_triangle](dcp23.gif)
+[ohms_triangle](https://raw.github.com/caseyanderson//mdp_stuff/electronics/dcp23.gif)
