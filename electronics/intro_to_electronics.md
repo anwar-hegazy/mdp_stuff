@@ -59,7 +59,3 @@ Ohm's Law
     applied across
   * In other words, if a voltage (V, measured in volts) is applied across a resistance (R, measured in ohms), a current (I, measured in amps) will flow.
   * To put it more simply: V/I = R
-
-Another way to remember all formulations of Ohm's Law:
-
-[ohms_triangle](https://raw.github.com/caseyanderson/mdp_stuff/electronics/dcp23.png)
