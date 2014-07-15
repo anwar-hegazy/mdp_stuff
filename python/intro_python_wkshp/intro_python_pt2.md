@@ -1,6 +1,6 @@
 # An introduction to Python (pt. 2, Programming)
 
-*Note: anything in between carrots ( `<` to `>`) denotes user input.
+*Note: anything in between carrots ( *`<`* to *`>`*) denotes user input.*
 
 ## Intro to Python
 
