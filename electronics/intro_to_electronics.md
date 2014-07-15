@@ -33,13 +33,13 @@ This example is analagous to electricity, however the "dust specks" are electron
 
 *Example 2*
 A battery powers a small lightbulb.
-This could be described as series of related actions:
+This could be described as series of related events:
 
   * The battery generates electrons at one terminal and takes in electrons at the other terminal
   * The bulb lights up as electrons flow around the circuit
   * The electrons flow around the circuit due to potential difference of battery
 
-Batteries force electrons around a circuit only when the circuit is complete. If one end of the battery is not connected there will be no electron flow, but the battery will still have the POTENTIAL to cause such a flow upon completion of the circuit. The higher the battery's voltage, the harder a cell can force electrons around a circuit.
+Batteries force electrons around a circuit only when the circuit is complete. If one end of the battery is not connected there will be incomplete/open (i.e. no electron flow), but the battery will still have the POTENTIAL to cause such a flow upon completion of the circuit. The higher the battery's voltage, the harder a cell can force electrons around a circuit.
 
 As a subtle alteration to this example, disconnect the battery from the lightbulb. Such an action results in the following changes to our circuit:
 
@@ -48,98 +48,18 @@ As a subtle alteration to this example, disconnect the battery from the lightbul
   * Air, an insulator, prevents electrons from jumping from one conductor (i.e. wire) to the other.
 
 ### "Flow ease"
-
-
-Resistors
-used to control current and voltage in specified ways
-
-it would be impractical to have resistors of every possible value...there would be millions
-
-so, there is an agreed upon range of values, however made within a certain tolerance
-
-  RESISTOR TOLERANCE – specified as a plus or minus percentage
-
-  A 10ohm plus/minus 10% resistor
-
-    -so, what is the actual range?
-    9-11ohms
-
-  resistors are also rated by the amount of power they can safely dissipate as heat without being   damaged.
-    -this is the power rating, measured in watts
-    typical resistors – 1/4W, 1/3W, 1/2W, etc.
-    in other words, exceeding this value will likely melt the componen
-
-  generally – higher the resister, the less current flows...
+  * The last measurable characteristic from Example 1 refers to how easy/difficult it is for water to flow out of the pipe.
+  * If the size of the opening (i.e. diameter) of the water pipe can be changed, one could make the opening smaller, resulting in an increase of resistance and a decrease of the rate of flow of the water.
+  * Electrically, resistance functions the same way: a resistor can allow current flow to speed up or slow down, depending on its value.
 
 Ohm's Law
-  volts - “pushing power”
-  amps - “rate of electron flow”
-
-  3V
-  vs
-  4V
-
-  V/I = a constant
+  * If there is one (and only one) formula one ought to memorize regarding electricity, this is it.
+  * V/I = a constant
     -where the constant depends on the substance through which current flows and voltage is 
     applied across
+  * In other words, if a voltage (V, measured in volts) is applied across a resistance (R, measured in ohms), a current (I, measured in amps) will flow.
+  * To put it more simply: V/I = R
 
-  Draw picture
-1. Cell has 2V
-2. current of 0.4A
-3. substance with a resistance of 5ohms
+Another way to remember all formulations of Ohm's Law:
 
-  cell has a voltage of 2V, so the voltage applied across the substance is also 2V.
-
-  The current through the substance is 0.4A
-
-  Ohm's Law:
-    2V/0.4A = 5ohms
-  the constant is commonly called the substance's resistance and is given the unit omega
-    -pronounced ohm
-
-  So the resistance is 5ohms
-    -sometimes people use the letter R instead of omega
-
-  So, if a voltage (V, measured in volts) is applied across a resistance (R, measured in ohms), a current (I, measured in amps) will flow.
-
-  In other words: V/I = R
-
-  What does the current depend on?
-    -values of resistance and voltage
-  
-  How would you determine the current if you already knew the voltage?
-    How would we do this with our example?
-    V/R = I
-    2V/5ohms = 0.4A
-
-  So, what would a voltage of 10V, applied across a resistance of 20ohms, produce a current of?
-
-    First, let's write this out:
-    10V/20ohms = 0.5A
-
-  What if we know the resistance and current and want to deduce the voltage?
-    -in other words, if we have a resistance, and a current is made to flow through it, then a 
-    voltage is produced across it
-      how would we write this?
-      V = IR
-      5ohms x 0.4A = 2V
-
-  What if we had a current of 1A flowing through a resistance of 5ohms
-    how would we write this?
-      1A * 5ohms = 5V
-  
-  Another way to remember
-    draw triangle
-    Cover up the missing one and do the calculation
-    V/R = I
-    V/I = R
-    IR = V
-    RI = V
-
-  Note: voltage always applied ACROSS
-    why?
-      It is the force that pushes electrons...the pushing power
-    
-    current always flows THROUGH
-    why?
-      It is the rate at which electrons flow through
+[ohms_triangle](dcp23.gif)
