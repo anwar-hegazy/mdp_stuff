@@ -15,12 +15,12 @@ Another good example of object orientation: painters do not design a new (set of
 There are a handful of datatypes in Python: strings, integers, floating point numbers, and boolean.
 * Strings: any character surrounded by quotes. Quotes must be balanced. In other words, I could say
 ..```
-a = 'this'
-a = “this”
-#but not:
-a = 'this
-#See the difference there?
-```
+..a = 'this'
+..a = “this”
+..#but not:
+..a = 'this
+..#See the difference there?
+..```
 
 Similarly, if we are going to declare a variable as a string, we have to use quotes.
 <pre>a = this
