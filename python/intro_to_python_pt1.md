@@ -95,4 +95,4 @@ In [2]: Flask.<AND THEN PRESS THE TAB KEY>
 
 If you get a long list of methods, you did it correctly. If not, review the steps above and make sure you did not actually skip anything.
 
-Last but not least, we are going to need access to a text editor of some sort. There are lots of options, but the two I normally recommend are [TextMate](http://macromates.com/) or [sublime text 2](http://www.sublimetext.com/). I use SublimeText, but you can use whatever you want. Nonetheless, you will need a text editor, that frequently will be open right next to your Terminal window, for any serious programming.
+Last but not least, we are going to need access to a text editor of some sort. There are lots of options, but the two I normally recommend are [TextMate](http://macromates.com/) or [SublimeText2](http://www.sublimetext.com/). I use SublimeText, but you can use whatever you want. Nonetheless, you will need a text editor, that frequently will be open right next to your Terminal window, for any serious programming.
