@@ -228,41 +228,49 @@ Before you try to type this in, notice the whitespace. Python groups statements 
 Try to enter this into your interpreter with a different input value (not 42).
 
 ## for statements
-Type this into your interpreter:
-<pre>In [36]: words = ['cat', 'widow', 'defenstrate']
 
-In [37]: for w in words:
-....: print w, len(w)
-....:
-cat 3
-widow 5
-defenstrate 11</pre>
-<br/>Python's for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. So, the above function declares a list called words with three items: cat, widow, and defenestrate (all strings). Then, it says for w (used as an index here) in the list words print w (the item at that position and the length of that particular item. This is why we get the sequence of words with their string length returned. Upon completion of the for loop (when the loop has iterated over each item in the list) the loop terminates.
-<br/><i>range</i>
+Type this into your interpreter:
+```
+words = ['cat', 'widow', 'defenestrate']
+
+for w in words:
+    print w, len(w)
+```
+Python's `for` statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. So, the above function declares a list called `words` with three items: cat, widow, and defenestrate (all strings). Then, it says `for w` (used as an index here) in the list `words` `print` `w` (the item at that position and the length of that particular item). This is why we get the sequence of words with their string length returned. Upon completion of the `for` loop (when the loop has iterated over each item in the list) the loop terminates.
+
+## range
+
 The last built in function to be concerned with, at a basic level, is the range function. Range
-generates lists containing arithmatic progressions. For example:
-<pre>In [33]: range(10)
-Out[33]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
-<br/>and
-<pre>In [34]: range(5, 10)
-Out[34]: [5, 6, 7, 8, 9]</pre>
-<br/><i>Defining Functions</i>
-By defining a function (using def), we can call it again for later use. For example:
-<pre>In [38]: def fib(n):
-....: a, b = 0, 1
-....: while a< n:
-....: print a,
-....: a, b = b, a+b
-....: </pre>
-<br/>Here we actually call the function and set n, so it will print the Fibonacci series up to (in this case) 2000:
-<pre>In [39]: fib( 2000 )
-0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597</pre>
-<br/><i>Intro to openCV</i>
-Let's look at some OpenCV examples together, and then next week we will transition these to video. Since a lot of the time, when programming, you will be looking for resources online to use/repurpose for your own purposes, let's do just that together with the following scripts taken from <a href="opencvpython.blogspot.com">here</a>.
-<br/><a href="https://github.com/abidrahmank/OpenCV2-Python/blob/master/Official_Tutorial_Python_Codes/1_introduction/display_image.py">Display an Image</a>
-<a href="https://github.com/abidrahmank/OpenCV2-Python/blob/master/Official_Tutorial_Python_Codes/1_introduction/modify_image.py">Modify an Image</a>
-<a href="https://github.com/abidrahmank/OpenCV2-Python/blob/master/Official_Tutorial_Python_Codes/2_core/fiter2d.py">Filtering an Image</a>
-<a href="https://github.com/abidrahmank/OpenCV2-Python/blob/master/Official_Tutorial_Python_Codes/2_core/BasicLinearTransforms.py">Linear Transform</a>
-<br/>Alternately, I was just alerted to the entire sample files from the Python build of openCV <a href="https://github.com/Itseez/opencv/tree/master/samples/python2">here</a>. Monkey around with any of these things and we will delve more deeply into them at the next meeting.
-<br/><i>Homework</i>
-Okay, so we have learned a bunch about python, and looked at a bunch of samples for OpenCV, however all of the samples dealt strictly with static images. I would like you to try to figure out, until the next time we meet, to replace the parts of the code that deal with images to video from your webcam. How does that change the behavior of the code? Is it a smooth transition? What else can you think of changing to get more interesting results? Do not worry if you do not understand every aspect of the code, tinkering with it will give you a good idea of what (and hopefully why) things work the way they do in each file.
+generates lists containing arithmatic progressions.
+
+*For example:*
+```
+In [33]: range(10)
+Out[33]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+and
+```
+In [34]: range(5, 10)
+Out[34]: [5, 6, 7, 8, 9]
+```
+## Defining Functions
+
+By defining a function (using `def`), we can call it again for later use.
+
+*For example:*
+```
+def fib(n):
+    a, b = 0, 1
+    while a < n:
+        print a,
+        a, b = b, a+b
+```
+
+Here we actually call the function and set `n`, so it will print the Fibonacci series up to (in this case) whatever `n` is:
+
+*For Example:
+```
+In [39]: fib( 2000 )
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+```
