@@ -81,12 +81,16 @@ pip install ipython
 ```
 
 To test to make sure everything works, run ipython from the terminal by typing the following:
-```ipython```
+
+```
+ipython
+```
 
 And then try to import one of the modules we installed. For example:
+
 ```
-In [1]: import cv
-In [2]: cv.<AND THEN PRESS THE TAB KEY>
+In [1]: from flask import Flask
+In [2]: Flask.<AND THEN PRESS THE TAB KEY>
 ```
 
 If you get a long list of methods, you did it correctly. If not, review the steps above and make sure you did not actually skip anything.
