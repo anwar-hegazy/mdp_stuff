@@ -10,34 +10,44 @@ For example, a car contains a computer capable of performing a complex series of
 
 Another good example of object orientation: painters do not design a new (set of) paintbrush(es), from scratch, for every single painting they create. Instead, a painter has certain paint brushes usable for a general task (for example, broad brush strokes) applicable across any painting requiring such a stroke. This is a good example of abstraction and generalization, and can become a powerful way of thinking when programming.
 
-*Datatypes*
+## Datatypes
 
 There are a handful of datatypes in Python: strings, integers, floating point numbers, and boolean.
-* Strings: any character surrounded by quotes. Quotes must be balanced. In other words, I could say
-..```
-..a = 'this'
+### Strings: any character surrounded by quotes. Quotes must be balanced. In other words, I could say
+
+```
+a = 'this'
 ..a = “this”
-..#but not:
-..a = 'this
-..#See the difference there?
-..```
+#but not:
+a = 'this
+#See the difference there?
+```
 
 Similarly, if we are going to declare a variable as a string, we have to use quotes.
-<pre>a = this
+
+```a = this
 #does not work because the word this is not defined.
-</pre>
-<br/>Python allows for numerous manipulations to strings. More specifically, if we go back to our original example:
-<pre>a = 'this'</pre>
-<br/>We could use various operations on it to get various information from our variable containing the string 'this'.
-<br/>For example:
-<pre>In [4]: len(a)
+```
+
+Python allows for numerous manipulations to strings. More specifically, if we go back to our original example:
+
+```a = 'this'```
+
+We could use various operations on it to get various information from our variable containing the string 'this'.
+
+For example:
+
+```In [4]: len(a)
 Out[4]: 4
-</pre>
-<br/>We could also say:
-<pre>In [5]: type(a)
+```
+
+We could also say:
+
+```In [5]: type(a)
 Out[5]: str    # str is short for string
-</pre>
-<br/>Lastly, we can only return part of the string by doing the following:
+```
+
+Lastly, we can only return part of the string by doing the following:
 <pre>In [6]: a[:3]
 Out[6]: 'thi'
 </pre>
