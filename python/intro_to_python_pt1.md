@@ -1,4 +1,4 @@
-# An introduction to Python
+# An introduction to Python (pt. 1, Installation)
 
 *Quick reference links*
 
