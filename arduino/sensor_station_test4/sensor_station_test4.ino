@@ -17,11 +17,13 @@ void setup() {
   pinMode(A1, INPUT);
   pinMode(A2, INPUT);
   pinMode(A3, INPUT);
+  pinMode(A4, INPUT);
 
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
 
   Serial.begin(9600);
 }
@@ -31,15 +33,17 @@ void loop() {
   s2 = analogRead(A1);
   s3 = analogRead(A2);
   s4 = analogRead(A3);
-  //  s5 = analogRead(A4);
+  s5 = analogRead(A4);
   //  s6 = analogRead(A5);
 
   analogWrite( 2, map( s1, 0, 1023, 0, 255 ) );
   analogWrite( 3, map( s2, 0, 1023, 0, 255 ) );
   analogWrite( 4, map( s3, 0, 1023, 0, 255 ) );
   analogWrite( 5, map( s4, 0, 1023, 0, 255 ) );
-  //  analogWrite( 6, map( s5, 0, 1023, 0, 255 ) );
+  analogWrite( 6, map( s5, 0, 1023, 0, 255 ) );
   //  analogWrite( 7, map( s6, 0, 1023, 0, 255 ) );
+
+  Serial.println(s5);
 
   delay(2);
 }
