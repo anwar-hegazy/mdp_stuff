@@ -6,7 +6,7 @@ Sensor Station plus MUX
  *
  * edited by Ross R.
  */
-
+ 
 int r0 = 0;      //value of select pin at the 4051 (s0)
 int r1 = 0;      //value of select pin at the 4051 (s1)
 int r2 = 0;      //value of select pin at the 4051 (s2)
@@ -14,7 +14,7 @@ int which = 0;   //which y pin we are selecting
 int val;
 
 void setup() {
-pinMode(A0, INPUT);
+  pinMode(A2, INPUT);       // mux1 input
   pinMode(2, OUTPUT);    // s0
   pinMode(3, OUTPUT);    // s1
   pinMode(4, OUTPUT);    // s2
@@ -22,7 +22,7 @@ pinMode(A0, INPUT);
 
 void loop () {
 
-  which = ((analogRead(A0)) % 8);             // scales potentiometer to 0 - 7, chooses what bit to send MUX, reads at A0
+  which = (0);             // scales potentiometer to 0 - 7, chooses what bit to send MUX, reads at A0
 
   // select the bit
   r0 = bitRead(which, 0);
@@ -34,8 +34,8 @@ void loop () {
   digitalWrite(4, r2);
 
   //Either read or write the multiplexed pin here
-
-  val = analogRead(A3);     // MUX ouputs here
+  // refactor, this should be digitalWrite with millis or something
+  val = analogRead(A2);     // MUX ouputs here
 
   Serial.print("sensor number ");
   Serial.print(which);
