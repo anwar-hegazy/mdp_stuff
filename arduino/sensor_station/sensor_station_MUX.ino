@@ -11,18 +11,22 @@ int r0 = 0;      //value of select pin at the 4051 (s0)
 int r1 = 0;      //value of select pin at the 4051 (s1)
 int r2 = 0;      //value of select pin at the 4051 (s2)
 int which = 0;   //which y pin we are selecting
-int val;
+int val, sensorValue;
 
 void setup() {
-  pinMode(A2, INPUT);       // mux1 input
+  pinMode(A0, INPUT);       // mux1 input
   pinMode(2, OUTPUT);    // s0
   pinMode(3, OUTPUT);    // s1
   pinMode(4, OUTPUT);    // s2
+
+  Serial.begin (115200);
 }
 
 void loop () {
 
-  which = (0);             // scales potentiometer to 0 - 7, chooses what bit to send MUX, reads at A0
+  //  which = (7);              // just for testing
+  sensorValue = analogRead(A2);
+  which = map(sensorValue, 0, 1023, 0, 7);
 
   // select the bit
   r0 = bitRead(which, 0);
@@ -35,7 +39,7 @@ void loop () {
 
   //Either read or write the multiplexed pin here
   // refactor, this should be digitalWrite with millis or something
-  val = analogRead(A2);     // MUX ouputs here
+  val = analogRead(A0);     // MUX ouputs here
 
   Serial.print("sensor number ");
   Serial.print(which);
