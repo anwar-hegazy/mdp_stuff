@@ -28,18 +28,19 @@ void loop () {
   sensorValue = analogRead(A2);
   which = map(sensorValue, 0, 1023, 0, 7);
 
-  // select the bit
+  // select the bit (MUX1)
   r0 = bitRead(which, 0);
   r1 = bitRead(which, 1);
-  r2 = bitRead(which, 2);    // use this with arduino 0013 (and newer versions)
+  r2 = bitRead(which, 2);
 
+  // write the bit (MUX1)
   digitalWrite(2, r0);
   digitalWrite(3, r1);
   digitalWrite(4, r2);
 
   //Either read or write the multiplexed pin here
   // refactor, this should be digitalWrite with millis or something
-  val = analogRead(A0);     // MUX ouputs here
+  val = analogRead(A0);     // MUX1 ouputs here
 
   Serial.print("sensor number ");
   Serial.print(which);
