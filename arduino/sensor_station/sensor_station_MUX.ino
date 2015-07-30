@@ -6,7 +6,7 @@ Sensor Station plus MUX
  *
  * edited by Ross R.
  */
- 
+
 int r0 = 0;      //value of select pin at the 4051 (s0)
 int r1 = 0;      //value of select pin at the 4051 (s1)
 int r2 = 0;      //value of select pin at the 4051 (s2)
