@@ -17,7 +17,6 @@ int  r5 = 0;
 int mux1, sensorValue1, which1;
 int mux2, sensorValue2, which2;
 
-
 void setup() {
   pinMode(A0, INPUT);       // mux1 input
   pinMode(A1, INPUT);       // mux2 input
@@ -35,12 +34,16 @@ void setup() {
   pinMode(6, OUTPUT);    // s1
   pinMode(7, OUTPUT);    // s2
 
+// //output LEDs
+//   pinMode( A4, OUTPUT );
+//   pinMode( A5, OUTPUT );
+
+
   Serial.begin (115200);
 }
 
 void loop () {
 
-  //  which = (7);              // just for testing
   sensorValue1 = analogRead(A2);
   sensorValue2 = analogRead(A3);
 
@@ -63,9 +66,9 @@ void loop () {
   digitalWrite(4, r2);
 
   // write the bit (MUX2)
-  digitalWrite(5, r0);
-  digitalWrite(6, r1);
-  digitalWrite(7, r2);
+  digitalWrite(5, r3);
+  digitalWrite(6, r4);
+  digitalWrite(7, r5);
 
   mux1 = analogRead(A0);     // MUX1 ouputs here
   mux2 = analogRead(A1);     // MUX2 ouputs here
