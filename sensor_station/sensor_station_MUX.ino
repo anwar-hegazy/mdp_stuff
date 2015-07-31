@@ -18,6 +18,7 @@ int mux1, sensorValue1, which1;
 int mux2, sensorValue2, which2;
 
 void setup() {
+
   pinMode(A0, INPUT);       // mux1 input
   pinMode(A1, INPUT);       // mux2 input
 
@@ -34,9 +35,9 @@ void setup() {
   pinMode(6, OUTPUT);    // s1
   pinMode(7, OUTPUT);    // s2
 
-// //output LEDs
-//   pinMode( A4, OUTPUT );
-//   pinMode( A5, OUTPUT );
+  // //output LEDs
+  pinMode( A4, OUTPUT );
+  pinMode( A5, OUTPUT );
 
 
   Serial.begin (115200);
@@ -73,6 +74,10 @@ void loop () {
   mux1 = analogRead(A0);     // MUX1 ouputs here
   mux2 = analogRead(A1);     // MUX2 ouputs here
 
+  // LED output
+  analogWrite(A4, mux1);
+  analogWrite(A5, mux2);
+
   Serial.print("MUX 1: sensor number ");
   Serial.print(which1);
   Serial.print('\t');
@@ -83,7 +88,7 @@ void loop () {
   Serial.print(which2);
   Serial.print('\t');
   Serial.print("val is ");
-  Serial.print(mux2);
+  Serial.println(mux2);
 
   delay(2);
 }
