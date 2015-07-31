@@ -42,25 +42,45 @@ void loop () {
 
   //  which = (7);              // just for testing
   sensorValue1 = analogRead(A2);
+  sensorValue2 = analogRead(A3);
+
   which1 = map(sensorValue1, 0, 1023, 0, 7);
+  which2 = map(sensorValue2, 0, 1023, 0, 7);
 
   // select the bit (MUX1)
   r0 = bitRead(which1, 0);
   r1 = bitRead(which1, 1);
   r2 = bitRead(which1, 2);
 
+  // select the bit (MUX2)
+  r3 = bitRead(which2, 0);
+  r4 = bitRead(which2, 1);
+  r5 = bitRead(which2, 2);
+
   // write the bit (MUX1)
   digitalWrite(2, r0);
   digitalWrite(3, r1);
   digitalWrite(4, r2);
 
-  mux1 = analogRead(A0);     // MUX1 ouputs here
+  // write the bit (MUX2)
+  digitalWrite(5, r0);
+  digitalWrite(6, r1);
+  digitalWrite(7, r2);
 
-  Serial.print("sensor number ");
+  mux1 = analogRead(A0);     // MUX1 ouputs here
+  mux2 = analogRead(A1);     // MUX2 ouputs here
+
+  Serial.print("MUX 1: sensor number ");
   Serial.print(which1);
   Serial.print('\t');
   Serial.print("val is ");
-  Serial.println(mux1);
+  Serial.print(mux1);
+  Serial.print('\t');
+  Serial.print("MUX 2: sensor number ");
+  Serial.print(which2);
+  Serial.print('\t');
+  Serial.print("val is ");
+  Serial.print(mux2);
 
   delay(2);
 }
