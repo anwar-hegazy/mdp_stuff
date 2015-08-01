@@ -6,7 +6,7 @@ int val;
 
 void setup() {
   Serial.begin (115200);
-  pinMode(A2, INPUT);       // mux1 input
+  pinMode(A0, INPUT);       // mux1 input
   pinMode(2, OUTPUT);    // s0
   pinMode(3, OUTPUT);    // s1
   pinMode(4, OUTPUT);    // s2
