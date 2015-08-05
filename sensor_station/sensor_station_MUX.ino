@@ -40,7 +40,7 @@ void setup() {
   pinMode( A5, OUTPUT );
 
 
-  Serial.begin (115200);
+  Serial.begin (115200);    // this is maybe too high?
 }
 
 void loop () {
