@@ -6,6 +6,8 @@ Based on this help doc: http://playground.arduino.cc/Learning/4051
 
  */
 
+//version 1 works
+
 int r0 = 0;
 int r1 = 0;
 int r2 = 0;
@@ -40,7 +42,7 @@ void setup() {
   pinMode( A5, OUTPUT );
 
 
-  Serial.begin (115200);    // this is maybe too high?
+  Serial.begin (9600);    // this is maybe too high?
 }
 
 void loop () {
